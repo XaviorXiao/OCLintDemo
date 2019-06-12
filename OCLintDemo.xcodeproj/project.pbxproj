@@ -13,9 +13,11 @@
 		8525E8F422A4BD270078D99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525E8F322A4BD270078D99C /* Assets.xcassets */; };
 		8525E8F722A4BD270078D99C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8525E8F522A4BD270078D99C /* LaunchScreen.storyboard */; };
 		8525E8FA22A4BD270078D99C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8525E8F922A4BD270078D99C /* main.m */; };
+		AC07C6B62C5F87BCA3D95E7B /* libPods-OCLintDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5533E6A3EAF4AD7EF61B0A /* libPods-OCLintDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		579ED30E55F004695491A498 /* Pods-OCLintDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCLintDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCLintDemo/Pods-OCLintDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8525E8E722A4BD260078D99C /* OCLintDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCLintDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8525E8EA22A4BD260078D99C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8525E8EB22A4BD260078D99C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		8525E8F622A4BD270078D99C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8525E8F822A4BD270078D99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8525E8F922A4BD270078D99C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE5533E6A3EAF4AD7EF61B0A /* libPods-OCLintDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCLintDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E604B6085DE9C616DD2BD454 /* Pods-OCLintDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCLintDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCLintDemo/Pods-OCLintDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC07C6B62C5F87BCA3D95E7B /* libPods-OCLintDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06529A7B0A4A845EA55E58CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E604B6085DE9C616DD2BD454 /* Pods-OCLintDemo.debug.xcconfig */,
+				579ED30E55F004695491A498 /* Pods-OCLintDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8525E8DE22A4BD260078D99C = {
 			isa = PBXGroup;
 			children = (
 				8525E8E922A4BD260078D99C /* OCLintDemo */,
 				8525E8E822A4BD260078D99C /* Products */,
+				06529A7B0A4A845EA55E58CC /* Pods */,
+				E29B71BE88631501639192CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = OCLintDemo;
 			sourceTree = "<group>";
 		};
+		E29B71BE88631501639192CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE5533E6A3EAF4AD7EF61B0A /* libPods-OCLintDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8525E8FD22A4BD270078D99C /* Build configuration list for PBXNativeTarget "OCLintDemo" */;
 			buildPhases = (
+				AA7EE726025A914FFD560127 /* [CP] Check Pods Manifest.lock */,
 				8525E8E322A4BD260078D99C /* Sources */,
 				8525E8E422A4BD260078D99C /* Frameworks */,
 				8525E8E522A4BD260078D99C /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA7EE726025A914FFD560127 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCLintDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8525E8E322A4BD260078D99C /* Sources */ = {
@@ -283,16 +329,14 @@
 		};
 		8525E8FE22A4BD270078D99C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E604B6085DE9C616DD2BD454 /* Pods-OCLintDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FX6GMBBXGY;
 				INFOPLIST_FILE = OCLintDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starlight.local;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -302,16 +346,14 @@
 		};
 		8525E8FF22A4BD270078D99C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 579ED30E55F004695491A498 /* Pods-OCLintDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FX6GMBBXGY;
 				INFOPLIST_FILE = OCLintDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starlight.local;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
